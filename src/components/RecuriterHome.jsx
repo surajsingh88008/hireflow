@@ -36,7 +36,7 @@ export function RecruiterHome() {
                 <LayoutDashboard size={20} />
               </div>
               <span className="text-xl font-extrabold tracking-tight text-gray-900">
-                Hire<span className="text-blue-600">Sync</span>
+                Hire<span className="text-blue-600">Flow</span>
               </span>
             </div>
 
