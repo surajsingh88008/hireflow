@@ -57,7 +57,7 @@ export default function JobForm() {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
         
-        {/* Compact Header */}
+        {/*  Header */}
         <div className="bg-blue-600 p-4 flex justify-between items-center text-white">
           <div className="flex items-center gap-3">
             <button onClick={() => navigate(-1)} className="hover:bg-blue-700 p-1 rounded-full transition-colors">
@@ -71,7 +71,7 @@ export default function JobForm() {
         <form onSubmit={handleSubmit} className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Left Column: Basic Info */}
+            {/* Left Column */}
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-600 mb-1">Job Profile</label>
@@ -118,7 +118,7 @@ export default function JobForm() {
               </div>
             </div>
 
-            {/* Right Column: Description */}
+            {/* Right colum */}
             <div className="flex flex-col">
               <label className="block text-sm font-semibold text-gray-600 mb-1">Job Description</label>
               <div className="relative flex-grow">
@@ -132,7 +132,7 @@ export default function JobForm() {
             </div>
           </div>
 
-          {/* Action Button */}
+          {/*  button */}
           <div className="mt-8 flex justify-end border-t pt-4">
             <button
               type="submit"

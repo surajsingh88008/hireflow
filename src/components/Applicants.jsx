@@ -23,7 +23,7 @@ export default function Applicants() {
   const [loading, setLoading] = useState(false);
   const [fetchingJobs, setFetchingJobs] = useState(true);
 
-  // 1. Fetch all jobs initially
+  // 1 Fetch all jobs initially
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -38,7 +38,7 @@ export default function Applicants() {
     fetchJobs();
   }, []);
 
-  // 2. Fetch applicants for a specific job ID
+  // 2 Fetch applicants for a specific job ID
   const viewApplicants = async (job) => {
     setSelectedJob(job);
     setLoading(true);
@@ -82,7 +82,7 @@ export default function Applicants() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
-          {/* LEFT: JOB LIST (4 Columns) */}
+          {/* LEFT: JOB LIST  */}
           <div className="lg:col-span-4 space-y-4">
             <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">Active Roles</h2>
             <div className="space-y-2 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
@@ -110,7 +110,7 @@ export default function Applicants() {
             </div>
           </div>
 
-          {/* RIGHT: APPLICANTS TABLE (8 Columns) */}
+          {/* RIGHT: APPLICANTS TABLE  */}
           <div className="lg:col-span-8">
             {!selectedJob ? (
               <div className="bg-white h-[60vh] rounded-3xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 text-center p-10">

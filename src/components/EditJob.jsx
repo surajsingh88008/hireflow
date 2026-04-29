@@ -21,7 +21,7 @@ export default function EditJob() {
   const [loading, setLoading] = useState(false);
   const [fetching, setFetching] = useState(true);
 
-  // 1. Fetch all jobs on component mount
+  //  Fetch all jobs on component mount
   useEffect(() => {
     fetchJobs();
   }, []);
@@ -37,13 +37,13 @@ export default function EditJob() {
     }
   };
 
-  // 2. Handle input changes for the edit form
+  //  Handle input changes for the edit form
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSelectedJob(prev => ({ ...prev, [name]: value }));
   };
 
-  // 3. Handle the @PutMapping call
+  //  Handle the @PutMapping call
   const handleUpdate = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -102,7 +102,7 @@ export default function EditJob() {
         </div>
 
         {!selectedJob ? (
-          /* --- STEP 1: JOB SELECTION GRID --- */
+          /* --- JOB SELECTION GRID --- */
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {jobs.map((job) => (
               <div 
@@ -116,7 +116,7 @@ export default function EditJob() {
                   <button 
                     onClick={() => setSelectedJob({
                       ...job, 
-                      postTechStack: job.postTechStack.join(", ") // Convert to string for editing
+                      postTechStack: job.postTechStack.join(", ") //  string for editing
                     })}
                     className="opacity-0 group-hover:opacity-100 flex items-center gap-1 bg-blue-600 text-white px-3 py-1.5 rounded-lg text-sm font-bold transition-all"
                   >
@@ -133,7 +133,7 @@ export default function EditJob() {
             ))}
           </div>
         ) : (
-          /* --- STEP 2: COMPACT EDIT FORM --- */
+          /* ---  EDIT FORM --- */
           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-in fade-in zoom-in duration-300">
             <div className="bg-blue-600 p-4 flex justify-between items-center text-white">
               <div className="flex items-center gap-3">

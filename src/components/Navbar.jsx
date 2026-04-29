@@ -16,7 +16,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("userId");
     localStorage.removeItem("userEmail");
-    setUserEmail(null); // 🔥 update UI
+    setUserEmail(null);
     navigate("/login");
   };
 
@@ -44,10 +44,10 @@ const Navbar = () => {
           </button>
 
           {userEmail ? (
-            // ✅ Logged in UI
+            
             <div className="flex items-center gap-4">
 
-              {/* 🔵 User Icon */}
+              {/*user Icon */}
               <div className="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold">
                 {userInitial}
               </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
 
             </div>
           ) : (
-            // ❌ Not logged in
+            //not logged in
             <button
               className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"
               onClick={() => navigate("/login")}

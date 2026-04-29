@@ -20,19 +20,19 @@ const Search = () => {
     try {
       let url = "";
 
-      // 🔍 Priority: Search by title
+      // Search by title
       if (query && query.trim() !== "") {
         url = `http://localhost:8080/findjob/${query}`;
       }
-      // 🔽 Sort by salary
+      // Sort by salary
       else if (sortBy === "salary") {
         url = "http://localhost:8080/findjob/salary";
       }
-      // 🔽 Sort by experience
+      // Sort by experience
       else if (sortBy === "experience") {
         url = "http://localhost:8080/findjob/exp";
       }
-      // 🟢 Default: All jobs
+      // all jobs
       else {
         url = "http://localhost:8080/alljobs";
       }
@@ -61,7 +61,6 @@ const Search = () => {
           </p>
         </div>
 
-        {/* Search Bar */}
         <SearchBar onSearch={fetchJobs} />
 
         {loading ? (

@@ -38,7 +38,7 @@ const Login = () => {
       const data = await response.text();
   
       if (response.ok && data) {
-        // ✅ store login data
+        //login data
         localStorage.setItem("userId", data);
         localStorage.setItem("userEmail", formData.userGmail);
       
